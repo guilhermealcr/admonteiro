@@ -1,0 +1,403 @@
+:root{
+
+    --color-background: #343a40;
+    --color-text: #e9ecef;
+    --color-blue: #06BCE1;
+    --color-thre: #495057;
+    --color-light-grey: #dee2e6;
+    --color-super-light-grey: #f8f9fa;
+}
+
+
+*{
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    list-style: none;
+    appearance: mone;
+    font-family: Montserrat;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+
+.container{
+    width: 1400px;
+    height: 3000px;
+    justify-content: center;
+
+}
+nav{
+    align-items: center;
+    height: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+}
+
+
+nav p {
+
+    font-weight: bold;
+    color: var(--color-blue);
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.navegation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 13px;
+    padding-left: 30px;
+    transition: linear 0.2s;
+}
+
+nav ul li a:hover{
+
+    color: var(--color-blue);
+
+}
+
+nav ul li a:not(.sobre) {
+
+    border-left: 2px solid var(--color-blue) ;
+
+}
+
+
+.insta, .face{
+
+    fill: var(--color-text);
+    margin-right: 10px;
+    background-color: var(--color-thre);
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.youtube{
+    margin-right: 10px;
+    background-color: var(--color-thre);
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    border-radius: 20px;
+    fill: var(--color-text);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.navegation a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navegation a:hover > .youtube{
+
+    background-color: #06BCE1;
+
+}
+.navegation a:hover > .face{
+
+    background-color: #06BCE1;
+
+}
+.navegation a:hover > .insta{
+
+    fill: var(--color-blue);
+    background-color: #06BCE1;
+
+}
+
+.ao-vivo{
+
+    font-weight: bold;
+    animation: ao-vivo 4s infinite;
+    
+}
+
+/* animation ao vivo button */
+
+@keyframes ao-vivo {
+
+    0%{
+
+        color: var(--color-text);
+
+    }
+
+
+    50%{
+
+        color: var(--color-blue);
+
+    }
+
+    100%{
+
+        color: var(--color-text);
+
+    }
+
+}
+
+/* fim -------- animation ao vivo button */
+
+
+.image-bg{
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    background-color: #06BCE1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-image: url(./img/img-back.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-blend-mode: overlay;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: black;
+    background-color: rgba(0, 0, 0, 0.603);
+    -webkit-mask-image: linear-gradient(to top, transparent 0,40%, black 100%);
+    left: 0px;
+    background-position: -1px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.h1-home{
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: -10px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+}
+.p-home{
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+
+
+.btn-home{
+    color: var(--color-super-light-grey);
+    border: 1px solid var(--color-light-grey);
+    width: 120px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn-home:hover{
+
+    background-color: rgba(255, 255, 255, 0.219);
+
+}
+
+@media screen and (max-width: 768px){
+    
+    nav ul{
+        display: none;
+    }
+
+}
+
+.section-cultos{
+    position: relative;
+    display: flex;
+    top: 800px;
+    max-width: 1600px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 200px;
+
+}   
+
+.card-c{
+    margin-bottom: 60px;
+}
+
+
+.card-c{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 11rem;
+    background-color: var(--color-super-light-grey);
+    border-radius: 20px;
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--color-text);
+    transition: all 0.4s;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+.container-img-card-c img{
+    object-fit: cover;
+    width: 100%;
+    height: 160%;
+    border-radius: 8px;
+    rotate: 90deg;
+    top: -75px;
+    position: relative;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: black;
+}
+.container-img-card-c{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+}
+
+.header-sec-cultos{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 3.2rem;
+    border-radius: 20px;
+    background-color: #49505767;
+    cursor: pointer;
+    animation: linear culto-float 6s infinite;
+}
+
+
+@keyframes culto-float {
+    
+    0%{
+        top: 0px;
+
+    }
+
+    50%{
+
+        top: -40px;
+
+    }
+
+    100%{
+
+        top: 0px;
+
+    }
+    
+
+}
+
+
+.header-sec-cultos h1{
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    gap: 10px;
+
+}
+.arrow-culto{
+    width: 20px;
+}
+.all-card{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.prayericon, .doutrinaicon, .evangelisticicon {
+
+    background-color: var(--color-thre);
+    padding: 20px;
+    width: 9vh;
+    height: 9vh;
+    border-radius: 50px;
+
+}
+.card-c:hover{
+
+    transform: scale(1.02);
+
+}
+
+.title-card-c{
+    margin-top: 70px;
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.title-card-c p {
+    color: var(--color-background);
+    margin: 3px;
+}
+
+.desc-card-c{
+    font-size: 14px;
+
+}
+
+.oracao{
+    
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: -1px;
+
+}
+
+.comtainer-card{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    height: 70%;
+    background-color: #06BCE1;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
